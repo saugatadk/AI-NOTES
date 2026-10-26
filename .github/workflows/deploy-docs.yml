@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -12,7 +13,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -23,6 +27,16 @@ jobs:
         run: |
           pip install mkdocs-material mkdocs-jupyter
 
+      - name: Prepare docs directory structure
+        run: |
+          mkdir -p docs
+          for dir in 01-math-foundations 02-classical-ml 03-deep-learning-core 04-sota-paper-implementations 05-llms-from-scratch 06-applied-genai-and-agents 07-mlops-and-systems machine-learning-specialization-andrew-ng; do
+            if [ -d "$dir" ]; then
+              cp -r "$dir" docs/
+            fi
+          done
+          cp README.md docs/index.md
+
       - name: Build and Deploy to gh-pages
         run: |
-          mkdocs gh-deploy --force
+          mkdocs gh-deploy --force --clean
