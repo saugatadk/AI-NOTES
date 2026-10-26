@@ -1,0 +1,58 @@
+site_name: The AI Knowledge Base
+site_url: https://saugatadk.github.io/AI-NOTES/
+site_author: Saugat Adhikari
+site_description: Notes spanning ML, deep learning, LLMs, agents, and MLOps.
+repo_url: https://github.com/saugatadk/AI-NOTES
+repo_name: saugatadk/AI-NOTES
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.arithmatex:
+      generic: true
+  - tables
+  - attr_list
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js
+
+nav:
+  - Home: README.md
+  - 0. Introductory ML: machine-learning-specialization-andrew-ng/README.md
+  - 1. Math Foundations: 01-math-foundations/README.md
+  - 2. Classical ML: 02-classical-ml/README.md
+  - 3. Deep Learning Core: 03-deep-learning-core/README.md
+  - 4. SOTA Implementations: 04-sota-paper-implementations/README.md
+  - 5. LLMs from Scratch: 05-llms-from-scratch/README.md
+  - 6. GenAI & Agents: 06-applied-genai-and-agents/README.md
+  - 7. MLOps & Systems: 07-mlops-and-systems/README.md
