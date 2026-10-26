@@ -1,110 +1,75 @@
-# The AI Master Knowledge Base
+# AI Notes & Engineering Reference
 
-A comprehensive, centralized study workspace and code reference covering the foundational **Artificial Intelligence** — spanning pure mathematical principles, classical algorithms, deep learning architectures, paper implementations, foundation LLMs, applied GenAI agents, and production MLOps systems.
-
----
-
-## 🧭 Master Curriculum & Recommended Study Order
-
-| Step | Pillar | Coverage | Local Directory | Key Topics Mastered |
-| :---: | :--- | :---: | :--- | :--- |
-| **0** | **Introductory ML** | *Foundational* | [machine-learning-specialization-andrew-ng](machine-learning-specialization-andrew-ng/README.md) | Supervised learning, neural nets, k-means, PCA, recommender systems |
-| **1** | **Math Foundations** | **~10%** | [01-math-foundations](01-math-foundations/README.md) | Linear algebra, matrix calculus, SVD/PCA, probability distributions |
-| **2** | **Classical ML & Guides** | **~15%** | [02-classical-ml](02-classical-ml/README.md) | SVMs, decision trees, ensemble methods, clustering, high-yield formula sheets |
-| **3** | **Deep Learning & CV** | **~25%** | [03-deep-learning-core](03-deep-learning-core/README.md) | Backprop, CNNs, ResNet, object detection, RNNs, attention mechanisms |
-| **4** | **SOTA Architectures** | **~10%** | [04-sota-paper-implementations](04-sota-paper-implementations/README.md) | ViT, Diffusion (DDPM), GANs, RoPE, LoRA, RL (PPO/DQN) in pure PyTorch |
-| **5** | **LLM Internals** | **~10%** | [05-llms-from-scratch](05-llms-from-scratch/README.md) | BPE tokenizers, multi-head causal attention, GPT-2 from scratch, SFT |
-| **6** | **GenAI & Agents** | **~10%** | [06-applied-genai-and-agents](06-applied-genai-and-agents/README.md) | Quantization (GGUF/AWQ), PEFT (QLoRA), alignment (DPO/ORPO), RAG, Agents |
-| **7** | **MLOps & Systems** | **~10%** | [07-mlops-and-systems](07-mlops-and-systems/README.md) | Distributed training, Ray, FastAPI serving, CI/CD, data drift monitoring |
+A structured collection of notes, code implementations, and reference guides covering machine learning foundations, deep learning, large language models, generative AI agents, and production systems.
 
 ---
 
-## 🗂️ Pillar Breakdown
+## Contents
 
-### 0. Introductory ML Foundations
-- **Path**: [machine-learning-specialization-andrew-ng/](machine-learning-specialization-andrew-ng/README.md)
-- **Core Topics**: Andrew Ng's 3-course specialization covering regression, neural networks, decision trees, anomaly detection, recommender systems, and reinforcement learning.
-- **Resources**: Interactive Jupyter notebooks in `assignments/` and topic summaries in `notes/`.
+### [0. Introductory Machine Learning](machine-learning-specialization-andrew-ng/README.md)
+Lecture notes and lab assignments based on Andrew Ng's Machine Learning Specialization.
+- Supervised learning (linear regression, logistic regression)
+- Neural networks and multiclass classification
+- Unsupervised algorithms (k-means clustering, anomaly detection)
+- Recommender systems and reinforcement learning basics
 
-### 1. Mathematical Foundations
-- **Path**: [01-math-foundations/](01-math-foundations/README.md)
-- **Core Topics**: Strips out pure-math abstractions to focus on the equations that power machine learning.
-- **Key Modules**:
-  - Linear Algebra & Vector Spaces
-  - Matrix Decompositions (SVD, Cholesky, Eigendecomposition)
-  - Vector Calculus, Gradients & Jacobians
-  - Probability Distributions & Continuous Optimization
-- **Tutorial Notebooks**: [Linear Regression](01-math-foundations/tutorials/tutorial_linear_regression.ipynb), [PCA](01-math-foundations/tutorials/tutorial_pca.ipynb), [GMM](01-math-foundations/tutorials/tutorial_gmm.ipynb).
+### [1. Mathematics for Machine Learning](01-math-foundations/README.md)
+Essential mathematical principles behind modern learning algorithms.
+- Linear algebra, vector spaces, and matrix decompositions (SVD, Cholesky)
+- Vector calculus, Jacobians, and gradient computation
+- Probability distributions, continuous optimization, and Lagrange multipliers
+- Hands-on tutorials for linear regression, PCA, and GMM implementations
 
-### 2. Classical Machine Learning & Formula Guides
-- **Path**: [02-classical-ml/](02-classical-ml/README.md)
-- **Core Topics**: High-yield visual reference sheets and mathematical formulas for rapid review.
-- **Cheat Sheets**:
-  - [Super Cheatsheet for Machine Learning](02-classical-ml/super-cheatsheet-machine-learning.pdf)
-  - [Supervised Learning Guide](02-classical-ml/cheatsheet-supervised-learning.pdf)
-  - [Unsupervised Learning Guide](02-classical-ml/cheatsheet-unsupervised-learning.pdf)
-  - [Deep Learning Summary](02-classical-ml/cheatsheet-deep-learning.pdf)
-  - [Tips, Tricks & Diagnostics](02-classical-ml/cheatsheet-machine-learning-tips-and-tricks.pdf)
+### [2. Classical Machine Learning](02-classical-ml/README.md)
+Concise reference sheets, mathematical formulas, and diagnostics for classical algorithms.
+- Supervised algorithms (SVMs, decision trees, random forests, boosting)
+- Unsupervised methods (clustering, PCA, dimensionality reduction)
+- Diagnostic guides for bias-variance tradeoff, regularization, and model validation
 
-### 3. Deep Learning Core, CV & Modern Architectures
-- **Path**: [03-deep-learning-core/](03-deep-learning-core/README.md)
-- **Core Topics**: Comprehensive interactive curriculum integrating mathematical theory and runnable PyTorch code side-by-side.
-- **Key Chapters**:
-  - [Multilayer Perceptrons & Backpropagation](03-deep-learning-core/chapter_multilayer-perceptrons/index.md)
-  - [Convolutional Neural Networks & Modern CNNs](03-deep-learning-core/chapter_convolutional-neural-networks/index.md)
-  - [Computer Vision & Object Detection](03-deep-learning-core/chapter_computer-vision/index.md)
-  - [Modern Recurrent Networks (LSTM/GRU)](03-deep-learning-core/chapter_recurrent-modern/index.md)
-  - [Attention Mechanisms & Transformers](03-deep-learning-core/chapter_attention-mechanisms-and-transformers/index.md)
+### [3. Deep Learning Core & Computer Vision](03-deep-learning-core/README.md)
+Comprehensive theory and PyTorch implementations adapted from *Dive into Deep Learning*.
+- Multilayer perceptrons, backpropagation, and optimization techniques (SGD, Adam)
+- Convolutional architectures (LeNet, AlexNet, ResNet, DenseNet) and object detection
+- Recurrent neural networks (LSTM, GRU) and sequence modeling
+- Self-attention mechanisms and transformer building blocks
 
-### 4. SOTA Paper Implementations & Generative Vision
-- **Path**: [04-sota-paper-implementations/](04-sota-paper-implementations/README.md)
-- **Core Topics**: Line-by-line PyTorch implementations of breakthrough AI research papers.
-- **Key Modules**:
-  - [Transformers & Attention](04-sota-paper-implementations/README.md#1-transformers-attention)
-  - [Generative Models & Diffusion](04-sota-paper-implementations/README.md#2-generative-models-diffusion)
-  - [Fine-Tuning & Efficient Architectures](04-sota-paper-implementations/README.md#3-fine-tuning-efficient-architectures)
-  - [Reinforcement Learning (RL)](04-sota-paper-implementations/README.md#4-reinforcement-learning-rl)
-  - [Vision & Recurrent Networks](04-sota-paper-implementations/README.md#5-vision-recurrent-networks)
+### [4. Research Paper Implementations](04-sota-paper-implementations/README.md)
+Readable PyTorch implementations of milestone deep learning research papers.
+- Attention mechanisms, RoPE, and FlashAttention
+- Generative modeling: DDPM, Stable Diffusion, and GANs
+- Parameter-efficient fine-tuning (LoRA) and reinforcement learning (PPO, DQN)
 
-### 5. Large Language Models (LLMs) From Scratch
-- **Path**: [05-llms-from-scratch/](05-llms-from-scratch/README.md)
-- **Core Topics**: Step-by-step implementation of an end-to-end GPT foundational model in pure PyTorch.
-- **Key Chapters**:
-  - [Ch 02: BPE Tokenization & Data Pipelines](05-llms-from-scratch/ch02/README.md)
-  - [Ch 03: Multi-Head Causal Attention](05-llms-from-scratch/ch03/README.md)
-  - [Ch 04: Full GPT-2 Architecture Assembly](05-llms-from-scratch/ch04/README.md)
-  - [Ch 05: Pretraining & Weight Loading](05-llms-from-scratch/ch05/README.md)
-  - [Ch 06-07: Fine-Tuning & Instruction Alignment](05-llms-from-scratch/ch06/README.md)
+### [5. Large Language Models From Scratch](05-llms-from-scratch/README.md)
+Step-by-step implementation of an autoregressive GPT model in pure PyTorch, following Sebastian Raschka's guide.
+- BPE tokenization and data pipeline setup
+- Multi-head causal attention and full GPT-2 assembly
+- Pretraining workflows, loss formulation, and weight loading
+- Instruction fine-tuning, classification heads, and preference alignment
 
-### 6. Applied GenAI, RAG, Fine-Tuning & AI Agents
-- **Path**: [06-applied-genai-and-agents/](06-applied-genai-and-agents/README.md)
-- **Core Topics**: Hands-on curriculum covering modern fine-tuning, parameter-efficiency, preference alignment, and production AI agent frameworks.
-- **Key Modules**:
-  - [Track 1: Fine-Tuning & Alignment](06-applied-genai-and-agents/01-finetuning-and-alignment/README.md) (SFT, LoRA/PEFT, DPO/ORPO, VLMs)
-  - [Track 2: AI Agents & Frameworks](06-applied-genai-and-agents/02-agents-and-frameworks/README.md) (ReAct loop, Tools, LangGraph, LlamaIndex, smolagents)
-  - [Track 3: Hands-On Notebooks](06-applied-genai-and-agents/notebooks/README.md)
+### [6. Applied Generative AI & Agents](06-applied-genai-and-agents/README.md)
+Practical guides and tutorials for fine-tuning modern models and building agentic workflows.
+- [Track 1: Fine-Tuning & Alignment](06-applied-genai-and-agents/01-finetuning-and-alignment/README.md) (SFT with TRL, LoRA/QLoRA, DPO/ORPO, vision-language models)
+- [Track 2: Autonomous Agents](06-applied-genai-and-agents/02-agents-and-frameworks/README.md) (ReAct pattern, LangGraph, LlamaIndex, smolagents)
+- [Track 3: Lab Notebooks](06-applied-genai-and-agents/notebooks/README.md) (interactive fine-tuning and agent labs)
 
-### 7. ML System Design, MLOps & Production
-- **Path**: [07-mlops-and-systems/](07-mlops-and-systems/README.md)
-- **Core Topics**: Bridging the gap between Jupyter prototypes and scalable, production-grade AI systems.
-- **Key Focus Areas**:
-  - Clean architecture, testing (`pytest`), and packaging
-  - Distributed training and hyperparameter tuning with Ray
-  - High-throughput REST API serving with FastAPI
-  - CI/CD automation and model registry
-  - Data drift monitoring and automated retraining pipelines
+### [7. MLOps & Production Systems](07-mlops-and-systems/README.md)
+Bridging research code and maintainable production systems, based on Made With ML.
+- Clean project structure, unit testing (`pytest`), and code quality
+- Distributed training and hyperparameter tuning with Ray
+- API serving with FastAPI and containerization
+- CI/CD automation, model registries, and drift monitoring
 
 ---
 
-## 📑 Acknowledgments & Sources
+## Acknowledgments
 
-This knowledge base is curated and maintained as a structured personal learning workspace. Subtle attribution and credit go to the following authors and open-source projects whose high-quality foundational materials were adapted to build these pillars:
+This repository brings together notes, exercises, and code implementations adapted from several open-source resources and courses:
 
-1. **Mathematical Foundations**: Adapted from *Mathematics for Machine Learning* by [Marc Peter Deisenroth, A. Aldo Faisal, and Cheng Soon Ong](https://github.com/mml-book/mml-book.github.io).
-2. **Classical Machine Learning**: Adapted from Stanford CS 229 VIP cheat sheets by [Afshine Amidi & Shervine Amidi](https://github.com/afshinea/stanford-cs-229-machine-learning).
-3. **Deep Learning Core**: Adapted from *Dive into Deep Learning (D2L)* by [Aston Zhang, Zack C. Lipton, Mu Li, Alexander J. Smola](https://github.com/d2l-ai/d2l-en).
-4. **SOTA Implementations**: Adapted from *Annotated Deep Learning Paper Implementations* by [Varuna Jayasiri & labml.ai](https://github.com/labmlai/annotated_deep_learning_paper_implementations).
-5. **LLMs From Scratch**: Adapted from *Build a Large Language Model (From Scratch)* by [Sebastian Raschka](https://github.com/rasbt/LLMs-from-scratch).
-6. **Applied GenAI & Agents**: Adapted from Hugging Face's [*smol-course*](https://github.com/huggingface/smol-course) and [*agents-course*](https://github.com/huggingface/agents-course), with reference architecture concepts from [Maxime Labonne](https://github.com/mlabonne/llm-course).
-7. **MLOps & System Design**: Adapted from *Made With ML* by [Goku Mohandas](https://github.com/GokuMohandas/Made-With-ML).
-8. **Introductory ML Specialization**: Adapted from Coursera's Machine Learning Specialization by [Andrew Ng (DeepLearning.AI)](https://www.coursera.org/specializations/machine-learning-introduction) and starter labs by [Peter Mulard](https://github.com/pmulard/machine-learning-specialization-andrew-ng).
+- **Introductory ML**: [DeepLearning.AI / Coursera Machine Learning Specialization](https://www.coursera.org/specializations/machine-learning-introduction) and starter labs by [Peter Mulard](https://github.com/pmulard/machine-learning-specialization-andrew-ng)
+- **Math Foundations**: [*Mathematics for Machine Learning*](https://github.com/mml-book/mml-book.github.io) by Marc Peter Deisenroth, A. Aldo Faisal, and Cheng Soon Ong
+- **Classical ML**: [Stanford CS 229 Cheat Sheets](https://github.com/afshinea/stanford-cs-229-machine-learning) by Afshine Amidi and Shervine Amidi
+- **Deep Learning**: [*Dive into Deep Learning (D2L)*](https://github.com/d2l-ai/d2l-en) by Aston Zhang, Zack C. Lipton, Mu Li, and Alexander J. Smola
+- **Paper Implementations**: [*Annotated Deep Learning Paper Implementations*](https://github.com/labmlai/annotated_deep_learning_paper_implementations) by Varuna Jayasiri & labml.ai
+- **LLMs From Scratch**: [*Build a Large Language Model (From Scratch)*](https://github.com/rasbt/LLMs-from-scratch) by Sebastian Raschka
+- **Applied GenAI & Agents**: [*smol-course*](https://github.com/huggingface/smol-course) and [*agents-course*](https://github.com/huggingface/agents-course) by Hugging Face
+- **MLOps**: [*Made With ML*](https://github.com/GokuMohandas/Made-With-ML) by Goku Mohandas
