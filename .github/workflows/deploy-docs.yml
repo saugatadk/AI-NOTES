@@ -45,6 +45,8 @@ jobs:
             fi
           done
           cp README.md docs/index.md
+          find docs/ -name "*.mdx" -exec bash -c 'mv "$0" "${0%.mdx}.md"' {} \;
+          find docs/ -name "*.md" -exec sed -i 's/\.mdx/\.md/g' {} +
 
       - name: Build documentation
         run: |
